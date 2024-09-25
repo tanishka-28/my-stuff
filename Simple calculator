@@ -1,0 +1,44 @@
+// Simple Calculator
+#include <stdio.h>
+
+int main() {
+    
+    char operator;
+    printf("select operation: ['+' '-' '*' '/']:");
+    scanf("%c",&operator);
+    
+    double num1, num2;
+    
+    printf("enter num1:");
+    scanf("%lf",&num1);
+    
+    printf("enter num2:");
+    scanf("%lf",&num2);
+    
+    double result;
+    
+    switch(operator) {
+        
+        case '+':
+       result = num1 + num2;
+     break;
+       
+        case '-':
+        result = num1 - num2;
+        break;
+        
+        case '*':
+       result = num1 * num2;
+        break;
+        
+        case '/':
+       result = num1 / num2;
+        break;
+        
+        default:
+        printf("Invalid");
+    
+    }
+    printf("%.2lf", result);
+    return 0;
+}
